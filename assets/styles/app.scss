@@ -1,0 +1,73 @@
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+span.animate-txt {
+  animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+}
+.btn-v1 {
+    background-color: #43bf03;
+    color: #fff;
+    font-weight: 500;
+    &:hover {
+        background-color: #5f9ea0;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}
+section {
+    @media (min-width: 992px) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+body {
+    background-color: lightgray;
+    font-family: papyrus;
+    .content {
+        margin-top: 59px;
+    }
+    .desktop {
+        border-radius: 5px;
+        box-shadow: 0px 1px 7px #878787;
+        position: fixed;
+        width: 768px;
+        top: 0;
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+    .mobile {
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+    .section-1 {
+        .col-right {
+            align-items: center;
+            display: flex;
+        }
+    }
+    p:hover {
+        font-weight: 600;
+    }
+}
+footer {
+    padding: 20px;
+    background-color: #484848;
+    color: #efefef;
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .copyright {
+        p {
+           font-size: 0.9rem;
+           margin-bottom: 0px;
+        }
+    }
+}

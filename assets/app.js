@@ -6,7 +6,18 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
+
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+
+$(function () {
+    console.log("Loading ...");
+    let test = $("#email").val();
+    console.log(test);
+    $('[data-toggle="popover"]').popover();
+});

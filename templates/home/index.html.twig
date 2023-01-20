@@ -1,20 +1,117 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseUser.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}User index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {# {{ encore_entry_link_tags('app_home') }} #}
+{% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+    {# {{ encore_entry_script_tags('app_home') }} #}
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/Alexandre/symfony/myapp/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/Alexandre/symfony/myapp/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <main id="home">
+        <section class="section-1">
+            <div class="row">
+                <div class="col-left col-lg-6">
+                    <img src="{{ asset('build/images/money.jpg') }}" alt="money" class="w-100">
+                </div>
+                <div class="col-right col-lg-6">
+                    <div>
+                        <h1>c'est quoi la patience ?</h1>
+                        <p>La patience est l'aptitude d'un individu à se maîtriser face à une attente,
+                        à rester calme dans une situation de tension, face à des difficultés,
+                        ou encore la qualité de persévérance face au retard.</p>
+                        <a class="btn btn-v1" href="{{ path('app_user_new') }}">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Mes avantages <span>❤️</span></h1>
+                    <ul>
+                        <li>Un investissement minimum à partir de $1 seulement</li>
+                        <li>Un bénéfice allant jusqu’à 300% du somme investir</li>
+                        <li>Une garantie de remboursement à tous nos membres</li>
+                        <li>Un système de paiement universel est standard</li>
+                    </ul>
+                    <a class="btn btn-v1" href="#">En savoir plus</a>
+                </div>
+                <div class="col-lg-6 mt-2">
+                    <div class="">
+                        <h1 class="mt-2">Nos plans d'investissements<span>&#128526</span></h1>
+                        <p>Elles sont simple, Plan par Semaine avec un dépôt de 10 000Ar minimum et un plan par Mois 50 000Ar minimum. </p>
+                        <table class="table">
+                            <tr>
+                                <th>P.Semaine</th>
+                                <th>P.Mois</th>
+                            <tr>
+                            <tr>
+                                <td>
+                                    Min : 10 000Ar<br>
+                                    Max : 20 000Ar<br>
+                                    Profit : <span class="animate-txt">118%</span><br>
+                                    Durée : 90 jours
+                                </td>
+                                <td>
+                                    Min : 50 000Ar<br>
+                                    Max : 100 000Ar<br>
+                                    Profit : <span class="animate-txt">128%</span><br>
+                                    Durée : 70 jours
+                                </td>
+                            <tr>
+                        </table>
+                        <a class="btn btn-v1" href="{{ path('app_user_new') }}">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="content-img">
+                        <img src="{{ asset('build/images/money.jpg') }}" alt="money" class="w-100">
+                    </div>
+                    <div class="content-description">
+                        <p>Créer un compte pour commencer (c’est gratuit)</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="content-img">
+                        <img src="{{ asset('build/images/money.jpg') }}" alt="money" class="w-100">
+                    </div>
+                    <div class="content-description">
+                        <p>Choisissez un plan d'investissement et commencez à faire un depôt</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="content-img">
+                        <img src="{{ asset('build/images/money.jpg') }}" alt="money" class="w-100">
+                    </div>
+                    <div class="content-description">
+                        <p>Retirez votre argent à la fin du plan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="#">link 1</a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#">link 2</a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#">link 3</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Dago-invest. Tous droits réservés. 2023</p>
+        </div>
+    </footer>
 {% endblock %}
